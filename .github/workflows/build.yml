@@ -32,6 +32,9 @@ jobs:
         run: |
           mvn -B install -DskipTests -Dmaven.javadoc.skip=true dependency:go-offline
 
+      - name: print
+        run: mvn --version
+
       - name: test
         run: |
           mvn -B -Dmaven.javadoc.skip=true verify
